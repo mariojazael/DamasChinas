@@ -27,34 +27,35 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         PanelPrincipal = new javax.swing.JPanel();
-        Hexagon1 = new javax.swing.JButton();
-        Hexagon2 = new javax.swing.JButton();
-        Hexagon3 = new javax.swing.JButton();
-        Hexagon4 = new javax.swing.JButton();
-        Hexagon5 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        Hexagon8 = new javax.swing.JButton();
         Hexagon6 = new javax.swing.JButton();
         Hexagon7 = new javax.swing.JButton();
-        Hexagon8 = new javax.swing.JButton();
+        Hexagon5 = new javax.swing.JButton();
+        Hexagon1 = new javax.swing.JButton();
+        Hexagon2 = new javax.swing.JButton();
         Hexagon9 = new javax.swing.JButton();
+        Hexagon4 = new javax.swing.JButton();
+        Hexagon3 = new javax.swing.JButton();
         Hexagon10 = new javax.swing.JButton();
-        Hexagon11 = new javax.swing.JButton();
-        Hexagon12 = new javax.swing.JButton();
-        Hexagon13 = new javax.swing.JButton();
-        Hexagon14 = new javax.swing.JButton();
         Hexagon15 = new javax.swing.JButton();
+        Hexagon14 = new javax.swing.JButton();
+        Hexagon13 = new javax.swing.JButton();
+        Hexagon12 = new javax.swing.JButton();
+        Hexagon11 = new javax.swing.JButton();
         Hexagon16 = new javax.swing.JButton();
         Hexagon17 = new javax.swing.JButton();
         Hexagon18 = new javax.swing.JButton();
         Hexagon19 = new javax.swing.JButton();
         Hexagon20 = new javax.swing.JButton();
         Hexagon21 = new javax.swing.JButton();
-        Hexagon22 = new javax.swing.JButton();
-        Hexagon23 = new javax.swing.JButton();
-        Hexagon24 = new javax.swing.JButton();
-        Hexagon25 = new javax.swing.JButton();
-        Hexagon26 = new javax.swing.JButton();
-        Hexagon27 = new javax.swing.JButton();
         Hexagon28 = new javax.swing.JButton();
+        Hexagon27 = new javax.swing.JButton();
+        Hexagon26 = new javax.swing.JButton();
+        Hexagon25 = new javax.swing.JButton();
+        Hexagon24 = new javax.swing.JButton();
+        Hexagon23 = new javax.swing.JButton();
+        Hexagon22 = new javax.swing.JButton();
         Hexagon29 = new javax.swing.JButton();
         Hexagon30 = new javax.swing.JButton();
         Hexagon31 = new javax.swing.JButton();
@@ -91,10 +92,37 @@ public class VistaPrincipal extends javax.swing.JFrame {
         Hexagon62 = new javax.swing.JButton();
         Hexagon63 = new javax.swing.JButton();
         Hexagon64 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PanelPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+
+        Hexagon8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TwitterHexagon.png"))); // NOI18N
+        Hexagon8.setBorder(null);
+        Hexagon8.setBorderPainted(false);
+        Hexagon8.setContentAreaFilled(false);
+        Hexagon8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        Hexagon6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TwitterHexagon.png"))); // NOI18N
+        Hexagon6.setBorder(null);
+        Hexagon6.setBorderPainted(false);
+        Hexagon6.setContentAreaFilled(false);
+        Hexagon6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        Hexagon7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TwitterHexagon.png"))); // NOI18N
+        Hexagon7.setBorder(null);
+        Hexagon7.setBorderPainted(false);
+        Hexagon7.setContentAreaFilled(false);
+        Hexagon7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        Hexagon5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TwitterHexagon.png"))); // NOI18N
+        Hexagon5.setBorder(null);
+        Hexagon5.setBorderPainted(false);
+        Hexagon5.setContentAreaFilled(false);
+        Hexagon5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         Hexagon1.setBackground(new java.awt.Color(255, 0, 51));
         Hexagon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TwitterHexagon.png"))); // NOI18N
@@ -109,11 +137,11 @@ public class VistaPrincipal extends javax.swing.JFrame {
         Hexagon2.setContentAreaFilled(false);
         Hexagon2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        Hexagon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TwitterHexagon.png"))); // NOI18N
-        Hexagon3.setBorder(null);
-        Hexagon3.setBorderPainted(false);
-        Hexagon3.setContentAreaFilled(false);
-        Hexagon3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Hexagon9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TwitterHexagon.png"))); // NOI18N
+        Hexagon9.setBorder(null);
+        Hexagon9.setBorderPainted(false);
+        Hexagon9.setContentAreaFilled(false);
+        Hexagon9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         Hexagon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TwitterHexagon.png"))); // NOI18N
         Hexagon4.setBorder(null);
@@ -121,35 +149,11 @@ public class VistaPrincipal extends javax.swing.JFrame {
         Hexagon4.setContentAreaFilled(false);
         Hexagon4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        Hexagon5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TwitterHexagon.png"))); // NOI18N
-        Hexagon5.setBorder(null);
-        Hexagon5.setBorderPainted(false);
-        Hexagon5.setContentAreaFilled(false);
-        Hexagon5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        Hexagon6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TwitterHexagon.png"))); // NOI18N
-        Hexagon6.setBorder(null);
-        Hexagon6.setBorderPainted(false);
-        Hexagon6.setContentAreaFilled(false);
-        Hexagon6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        Hexagon7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TwitterHexagon.png"))); // NOI18N
-        Hexagon7.setBorder(null);
-        Hexagon7.setBorderPainted(false);
-        Hexagon7.setContentAreaFilled(false);
-        Hexagon7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        Hexagon8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TwitterHexagon.png"))); // NOI18N
-        Hexagon8.setBorder(null);
-        Hexagon8.setBorderPainted(false);
-        Hexagon8.setContentAreaFilled(false);
-        Hexagon8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        Hexagon9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TwitterHexagon.png"))); // NOI18N
-        Hexagon9.setBorder(null);
-        Hexagon9.setBorderPainted(false);
-        Hexagon9.setContentAreaFilled(false);
-        Hexagon9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Hexagon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TwitterHexagon.png"))); // NOI18N
+        Hexagon3.setBorder(null);
+        Hexagon3.setBorderPainted(false);
+        Hexagon3.setContentAreaFilled(false);
+        Hexagon3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         Hexagon10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TwitterHexagon.png"))); // NOI18N
         Hexagon10.setBorder(null);
@@ -157,23 +161,11 @@ public class VistaPrincipal extends javax.swing.JFrame {
         Hexagon10.setContentAreaFilled(false);
         Hexagon10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        Hexagon11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
-        Hexagon11.setBorder(null);
-        Hexagon11.setBorderPainted(false);
-        Hexagon11.setContentAreaFilled(false);
-        Hexagon11.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        Hexagon12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
-        Hexagon12.setBorder(null);
-        Hexagon12.setBorderPainted(false);
-        Hexagon12.setContentAreaFilled(false);
-        Hexagon12.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        Hexagon13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
-        Hexagon13.setBorder(null);
-        Hexagon13.setBorderPainted(false);
-        Hexagon13.setContentAreaFilled(false);
-        Hexagon13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Hexagon15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
+        Hexagon15.setBorder(null);
+        Hexagon15.setBorderPainted(false);
+        Hexagon15.setContentAreaFilled(false);
+        Hexagon15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         Hexagon14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
         Hexagon14.setBorder(null);
@@ -181,11 +173,23 @@ public class VistaPrincipal extends javax.swing.JFrame {
         Hexagon14.setContentAreaFilled(false);
         Hexagon14.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        Hexagon15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
-        Hexagon15.setBorder(null);
-        Hexagon15.setBorderPainted(false);
-        Hexagon15.setContentAreaFilled(false);
-        Hexagon15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Hexagon13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
+        Hexagon13.setBorder(null);
+        Hexagon13.setBorderPainted(false);
+        Hexagon13.setContentAreaFilled(false);
+        Hexagon13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        Hexagon12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
+        Hexagon12.setBorder(null);
+        Hexagon12.setBorderPainted(false);
+        Hexagon12.setContentAreaFilled(false);
+        Hexagon12.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        Hexagon11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
+        Hexagon11.setBorder(null);
+        Hexagon11.setBorderPainted(false);
+        Hexagon11.setContentAreaFilled(false);
+        Hexagon11.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         Hexagon16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
         Hexagon16.setBorder(null);
@@ -223,35 +227,11 @@ public class VistaPrincipal extends javax.swing.JFrame {
         Hexagon21.setContentAreaFilled(false);
         Hexagon21.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        Hexagon22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
-        Hexagon22.setBorder(null);
-        Hexagon22.setBorderPainted(false);
-        Hexagon22.setContentAreaFilled(false);
-        Hexagon22.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        Hexagon23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
-        Hexagon23.setBorder(null);
-        Hexagon23.setBorderPainted(false);
-        Hexagon23.setContentAreaFilled(false);
-        Hexagon23.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        Hexagon24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
-        Hexagon24.setBorder(null);
-        Hexagon24.setBorderPainted(false);
-        Hexagon24.setContentAreaFilled(false);
-        Hexagon24.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        Hexagon25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
-        Hexagon25.setBorder(null);
-        Hexagon25.setBorderPainted(false);
-        Hexagon25.setContentAreaFilled(false);
-        Hexagon25.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        Hexagon26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
-        Hexagon26.setBorder(null);
-        Hexagon26.setBorderPainted(false);
-        Hexagon26.setContentAreaFilled(false);
-        Hexagon26.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Hexagon28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
+        Hexagon28.setBorder(null);
+        Hexagon28.setBorderPainted(false);
+        Hexagon28.setContentAreaFilled(false);
+        Hexagon28.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         Hexagon27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
         Hexagon27.setBorder(null);
@@ -259,11 +239,35 @@ public class VistaPrincipal extends javax.swing.JFrame {
         Hexagon27.setContentAreaFilled(false);
         Hexagon27.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        Hexagon28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
-        Hexagon28.setBorder(null);
-        Hexagon28.setBorderPainted(false);
-        Hexagon28.setContentAreaFilled(false);
-        Hexagon28.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Hexagon26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
+        Hexagon26.setBorder(null);
+        Hexagon26.setBorderPainted(false);
+        Hexagon26.setContentAreaFilled(false);
+        Hexagon26.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        Hexagon25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
+        Hexagon25.setBorder(null);
+        Hexagon25.setBorderPainted(false);
+        Hexagon25.setContentAreaFilled(false);
+        Hexagon25.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        Hexagon24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
+        Hexagon24.setBorder(null);
+        Hexagon24.setBorderPainted(false);
+        Hexagon24.setContentAreaFilled(false);
+        Hexagon24.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        Hexagon23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
+        Hexagon23.setBorder(null);
+        Hexagon23.setBorderPainted(false);
+        Hexagon23.setContentAreaFilled(false);
+        Hexagon23.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        Hexagon22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
+        Hexagon22.setBorder(null);
+        Hexagon22.setBorderPainted(false);
+        Hexagon22.setContentAreaFilled(false);
+        Hexagon22.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         Hexagon29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/EmptyHexagon.png"))); // NOI18N
         Hexagon29.setBorder(null);
@@ -481,105 +485,89 @@ public class VistaPrincipal extends javax.swing.JFrame {
         Hexagon64.setContentAreaFilled(false);
         Hexagon64.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        javax.swing.GroupLayout PanelPrincipalLayout = new javax.swing.GroupLayout(PanelPrincipal);
-        PanelPrincipal.setLayout(PanelPrincipalLayout);
-        PanelPrincipalLayout.setHorizontalGroup(
-            PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
                 .addComponent(Hexagon8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Hexagon6)
                     .addComponent(Hexagon7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                        .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Hexagon1)
-                            .addComponent(Hexagon2))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Hexagon2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PanelPrincipalLayout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(Hexagon3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon13)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon18))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(Hexagon10)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Hexagon11)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Hexagon21)
-                                    .addComponent(Hexagon20))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Hexagon22)
-                                    .addComponent(Hexagon23, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Hexagon35)
-                                    .addComponent(Hexagon36)))
-                            .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                        .addComponent(Hexagon4)
-                                        .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                                .addGap(6, 6, 6)
-                                                .addComponent(Hexagon14))
-                                            .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Hexagon13))))
-                                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                        .addComponent(Hexagon3)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(Hexagon12)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Hexagon12))
-                                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                        .addGap(38, 38, 38)
-                                        .addComponent(Hexagon15)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                        .addComponent(Hexagon19)
+                                        .addComponent(Hexagon19))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(Hexagon11)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Hexagon24)
-                                        .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Hexagon33))
-                                            .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                                .addGap(6, 6, 6)
-                                                .addComponent(Hexagon34))))
-                                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                        .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(Hexagon17)
-                                                    .addComponent(Hexagon16))
-                                                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelPrincipalLayout.createSequentialGroup()
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                            .addComponent(Hexagon28))
-                                                        .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                                            .addGap(6, 6, 6)
-                                                            .addComponent(Hexagon27)))
-                                                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(Hexagon26))))
-                                            .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                                .addComponent(Hexagon18)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Hexagon25)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(Hexagon29)
-                                            .addComponent(Hexagon30)
-                                            .addComponent(Hexagon31)
-                                            .addComponent(Hexagon32)))))))
-                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                        .addComponent(Hexagon5)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Hexagon20)
+                                            .addComponent(Hexagon21))))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Hexagon9)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Hexagon24)
+                                .addComponent(Hexagon23)
+                                .addComponent(Hexagon22)
+                                .addComponent(Hexagon25, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(Hexagon26))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Hexagon35)
+                            .addComponent(Hexagon36)
+                            .addComponent(Hexagon34)
+                            .addComponent(Hexagon33)
+                            .addComponent(Hexagon32)
+                            .addComponent(Hexagon31)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(Hexagon5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon9))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(Hexagon1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon4)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(Hexagon15)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon16))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(Hexagon14)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon17)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Hexagon27)
+                            .addComponent(Hexagon28))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Hexagon30)
+                            .addComponent(Hexagon29))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Hexagon42)
                     .addComponent(Hexagon43)
                     .addComponent(Hexagon41)
@@ -588,206 +576,244 @@ public class VistaPrincipal extends javax.swing.JFrame {
                     .addComponent(Hexagon38)
                     .addComponent(Hexagon37))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                        .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Hexagon47)
-                            .addComponent(Hexagon46)
-                            .addComponent(Hexagon45)
-                            .addComponent(Hexagon44))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Hexagon54)
-                            .addComponent(Hexagon53)
-                            .addComponent(Hexagon52)
-                            .addComponent(Hexagon51)))
-                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                        .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Hexagon49)
-                            .addComponent(Hexagon48))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Hexagon50)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Hexagon49)
+                    .addComponent(Hexagon48)
+                    .addComponent(Hexagon47)
+                    .addComponent(Hexagon46)
+                    .addComponent(Hexagon45)
+                    .addComponent(Hexagon44))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Hexagon54)
+                    .addComponent(Hexagon53)
+                    .addComponent(Hexagon52)
+                    .addComponent(Hexagon51)
+                    .addComponent(Hexagon50))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Hexagon58)
                     .addComponent(Hexagon57)
                     .addComponent(Hexagon56)
                     .addComponent(Hexagon55))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Hexagon61)
                     .addComponent(Hexagon60)
                     .addComponent(Hexagon59))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Hexagon63)
                     .addComponent(Hexagon62))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Hexagon64)
-                .addContainerGap(635, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
-        PanelPrincipalLayout.setVerticalGroup(
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(Hexagon7)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon6)
+                            .addGap(169, 169, 169))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(Hexagon2)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon5)
+                            .addGap(148, 148, 148))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(Hexagon10)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon4)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon9)
+                            .addGap(131, 131, 131))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(Hexagon11)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon12)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon13)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon14)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon15)
+                            .addGap(116, 116, 116))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(Hexagon21)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon20)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon19)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon18)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon17)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon16)
+                            .addGap(101, 101, 101))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(Hexagon22)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon23)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon24)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon25)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon26)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon27)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon28)
+                            .addGap(87, 87, 87))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(Hexagon36)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon35)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon34)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon33)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon32)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon31)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon30)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Hexagon29)
+                            .addGap(66, 66, 66)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(Hexagon49)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Hexagon48)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Hexagon47)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Hexagon46)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Hexagon45)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Hexagon44)
+                        .addGap(104, 104, 104))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addComponent(Hexagon37)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon38)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon39)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon40)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon41)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon42)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon43))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(54, 54, 54)
+                                .addComponent(Hexagon50)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon51)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon52)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon53)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon54))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(Hexagon58)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon57)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon56)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon55)
+                                .addGap(48, 48, 48))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(93, 93, 93)
+                                .addComponent(Hexagon59)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon60)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon61))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(Hexagon63)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Hexagon62)
+                                .addGap(86, 86, 86)))
+                        .addGap(88, 88, 88))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(169, 169, 169)
+                        .addComponent(Hexagon8))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(166, 166, 166)
+                        .addComponent(Hexagon64)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Has Ganado!!");
+
+        jLabel2.setBackground(new java.awt.Color(102, 0, 102));
+        jLabel2.setFont(new java.awt.Font("Engravers MT", 3, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Damas Chinas ");
+
+        jLabel3.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Dificultad: Dificil");
+
+        javax.swing.GroupLayout PanelPrincipalLayout = new javax.swing.GroupLayout(PanelPrincipal);
+        PanelPrincipal.setLayout(PanelPrincipalLayout);
+        PanelPrincipalLayout.setHorizontalGroup(
             PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelPrincipalLayout.createSequentialGroup()
                 .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                        .addGap(172, 172, 172)
-                        .addComponent(Hexagon10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                .addComponent(Hexagon3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Hexagon4))
-                            .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                .addComponent(Hexagon7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Hexagon6))))
+                        .addGap(110, 110, 110)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                        .addGap(230, 230, 230)
-                        .addComponent(Hexagon8)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Hexagon9)
+                        .addGap(21, 21, 21)
+                        .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(PanelPrincipalLayout.createSequentialGroup()
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        PanelPrincipalLayout.setVerticalGroup(
+            PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelPrincipalLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Hexagon21)
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                        .addComponent(Hexagon2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Hexagon1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Hexagon5)
-                        .addGap(227, 227, 227))
-                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                        .addComponent(Hexagon20)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Hexagon19)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Hexagon18)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Hexagon17)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Hexagon16)
-                        .addGap(175, 175, 175))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelPrincipalLayout.createSequentialGroup()
-                .addGap(0, 94, Short.MAX_VALUE)
-                .addComponent(Hexagon36)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Hexagon35)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Hexagon34)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Hexagon33)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Hexagon32)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Hexagon31)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Hexagon30)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Hexagon29)
-                .addGap(136, 136, 136))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel3)
+                .addGap(26, 26, 26))
             .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                            .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                    .addGap(154, 154, 154)
-                                    .addComponent(Hexagon11)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon12)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon13)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon14)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon15))
-                                .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                    .addGap(114, 114, 114)
-                                    .addComponent(Hexagon22)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon23)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon24)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon25)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon26)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon27)))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Hexagon28))
-                        .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                            .addGap(112, 112, 112)
-                            .addComponent(Hexagon37)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Hexagon38)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Hexagon39)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Hexagon40)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Hexagon41)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Hexagon42)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Hexagon43))
-                        .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                            .addGap(153, 153, 153)
-                            .addComponent(Hexagon50)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Hexagon51)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Hexagon52)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Hexagon53)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Hexagon54))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelPrincipalLayout.createSequentialGroup()
-                            .addGap(136, 136, 136)
-                            .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelPrincipalLayout.createSequentialGroup()
-                                    .addComponent(Hexagon49)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon48)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon47)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon46)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon45)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon44)
-                                    .addGap(18, 18, 18))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelPrincipalLayout.createSequentialGroup()
-                                    .addComponent(Hexagon58)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon57)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon56)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon55)
-                                    .addGap(51, 51, 51))
-                                .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                                    .addGap(55, 55, 55)
-                                    .addComponent(Hexagon59)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon60)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon61))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelPrincipalLayout.createSequentialGroup()
-                                    .addComponent(Hexagon63)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(Hexagon62)
-                                    .addGap(87, 87, 87)))))
-                    .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                        .addGap(237, 237, 237)
-                        .addComponent(Hexagon64)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(212, 212, 212)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -905,5 +931,9 @@ public class VistaPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton Hexagon8;
     public javax.swing.JButton Hexagon9;
     private javax.swing.JPanel PanelPrincipal;
+    public javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

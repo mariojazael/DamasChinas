@@ -84,7 +84,10 @@ public class VistaPrincipalControlador implements ActionListener{
     private GraphNode c62 = new GraphNode("youtube.62");
     private GraphNode c63 = new GraphNode("youtube.63");
     private GraphNode c64 = new GraphNode("youtube.64");
-    
+    private GraphNode d1 = new GraphNode("blanco.65");
+    private GraphNode d2 = new GraphNode("blanco.66");
+    private GraphNode d3 = new GraphNode("blanco.67");
+
     ImageIcon imagenTwitter = new ImageIcon("src/Imagenes/TwitterHexagon.png");
     Icon iconoTwitter = new ImageIcon(imagenTwitter.getImage().getScaledInstance(vistaPrincipal.Hexagon1.getWidth(), vistaPrincipal.Hexagon1.getHeight(), Image.SCALE_SMOOTH));
     ImageIcon imagenYoutube = new ImageIcon("src/Imagenes/YoutubeHexagon.png");
@@ -92,17 +95,20 @@ public class VistaPrincipalControlador implements ActionListener{
     ImageIcon imagenHexagono = new ImageIcon("src/Imagenes/EmptyHexagon.png");
     Icon iconoHexagono = new ImageIcon(imagenHexagono.getImage().getScaledInstance(vistaPrincipal.Hexagon1.getWidth(), vistaPrincipal.Hexagon1.getHeight(), Image.SCALE_SMOOTH));
     private boolean estaSeleccionado;
+    private boolean movimiento50;
     String dificultad = new String();
     List<JButton> listaBotones = new LinkedList<>();
     List<GraphNode> listaNodos = new LinkedList<>();
 
     public VistaPrincipalControlador(VistaPrincipal vistaPrincipal) {
         this.vistaPrincipal = vistaPrincipal;
+        vistaPrincipal.jLabel1.setVisible(false);
         estaSeleccionado = false;                     
         inicializarGrafo();
         incializarListaNodos();
         inicializarListaBotones();
         inicializarListeners();
+        movimiento50 = false;
         dificultad = "dificil";
         pintarTablero(new GraphNode(""));
     }
@@ -157,8 +163,40 @@ public class VistaPrincipalControlador implements ActionListener{
             intercambiarValores(nodoActual, nodo);
             nodoActual.setEstaSeleccionado(false);
             pintarTablero(nodo);
+            condicionesVictoria();
             recorrerGrafo();
+            condicionesVictoria();
         }else nodoActual.setEstaSeleccionado(false);
+    }
+
+    private void checarNodos50(){
+        if(d1.getData().startsWith("youtube")){
+            if(!c8.getData().startsWith("twitter")){
+                c8.setData("youtube.8");
+                d1.setData("empty");
+            }else c8.setData("twitter.8");          
+           
+        }if(d2.getData().startsWith("youtube")){
+            if(!c2.getData().startsWith("twitter")){
+                c2.setData("youtube.2");
+                d2.setData("empty");
+            }else c2.setData("twitter.2");
+           
+        }if(d3.getData().startsWith("youtube")){
+            if(!c5.getData().startsWith("twitter")){
+                c5.setData("youtube.5");
+                d3.setData("empty");
+            }else c5.setData("twitter.5");
+            
+        }
+    }
+
+    private void condicionesVictoria(){
+        if(condicionVictoriaYoutube()){
+            vistaPrincipal.jLabel1.setVisible(true);
+        } else if (condicionVictoriaTwitter()) {
+            vistaPrincipal.jLabel1.setVisible(true);
+        }
     }
     
     private boolean validarSalto(GraphNode nodoActual, GraphNode nodo){
@@ -200,16 +238,32 @@ public class VistaPrincipalControlador implements ActionListener{
     }
     
     public void recorrerGrafo(){
+        int contador = 0;
+        int limite = 0;
+        GraphNode nodoDefinitivo = null;
         Queue<GraphNode> queue = new LinkedList();
+        Map<Integer, GraphNode> mapa = new TreeMap<>();
+        List<GraphNode> lista = new LinkedList<>();
+        Iterator<GraphNode> iterator;
         queue.add(c1);
-        int k = 1;
         if(!c1.isEstaVisitado()){
             while(!queue.isEmpty()) {
                 GraphNode presentNode = (GraphNode) queue.remove();
-                if(presentNode.getData().startsWith("youtube") && k == 1) {
-                    determinarMovimiento(presentNode);
-                    k++;
-                    //return;
+                if(presentNode.getData().startsWith("youtube") && determinarMovimiento(presentNode) != null) {
+                    lista.addAll(determinarMovimiento(presentNode));
+                    iterator = lista.iterator();
+                    GraphNode nodo = null;
+                    limite += 2;
+                    while(contador < limite){
+                        if(contador == limite - 2) {
+                            nodo = iterator.next();
+                            break;
+                        }
+                        iterator.next();
+                        contador++;
+                    }
+                    contador = 0;
+                    mapa.put(nodo.getDistancia(), nodo);
                 }
 
                 if (presentNode.getAbajo() != null && !presentNode.getAbajo().isEstaVisitado()) {
@@ -242,10 +296,21 @@ public class VistaPrincipalControlador implements ActionListener{
             while(!queue.isEmpty()) {
                 GraphNode presentNode = (GraphNode) queue.remove();
 
-                if(presentNode.getData().startsWith("youtube") && k == 1) {
-                    determinarMovimiento(presentNode);
-                    k++;
-                    //return;
+                if(presentNode.getData().startsWith("youtube") && determinarMovimiento(presentNode) != null) {
+                    lista.addAll(determinarMovimiento(presentNode));
+                    iterator = lista.iterator();
+                    GraphNode nodo = null;
+                    limite += 2;
+                    while(contador < limite){
+                        if(contador == limite - 2) {
+                            nodo = iterator.next();
+                            break;
+                        }
+                        iterator.next();
+                        contador++;
+                    }
+                    contador = 0;
+                    mapa.put(nodo.getDistancia(), nodo);
                 }
 
                 if (presentNode.getAbajo() != null && presentNode.getAbajo().isEstaVisitado()) {
@@ -275,45 +340,91 @@ public class VistaPrincipalControlador implements ActionListener{
                 if(presentNode.isEstaVisitado()) presentNode.setEstaVisitado(false);
             }
         }
-        System.out.println("0");
+        GenerarMovimientoEnemigo(mapa, lista);
     }
 
-    public void determinarMovimiento(GraphNode nodoActual){
-        System.out.println("1");
+    private void GenerarMovimientoEnemigo(Map<Integer, GraphNode> mapa, List<GraphNode> lista) {
+        GraphNode nodoDefinitivo;
+        Iterator<GraphNode> iterator;
+        nodoDefinitivo = determinarNodo(mapa);
+        iterator = lista.iterator();
+        while(iterator.hasNext()){
+            GraphNode nodoIdentico = iterator.next();
+            if(nodoIdentico.getData().equals(nodoDefinitivo.getData())){
+                GraphNode nodoActual = iterator.next();
+                intercambiarValores(nodoActual, nodoDefinitivo);
+                checarNodos50();
+                pintarTablero(new GraphNode(""));
+                break;
+            }
+            iterator.next();
+        }
+    }
+
+    public GraphNode determinarNodo(Map<Integer, GraphNode> mapa){
+        Object[] llaves = mapa.keySet().toArray();
+        return seleccionarNodoAleatorio(llaves, mapa);
+    }
+    
+    public GraphNode seleccionarNodoAleatorio(Object[] llaves, Map<Integer, GraphNode> mapa){
+        int i = 0;
+        GraphNode nodo = null;
+        while(i < 10){
+            if(llaves.length == i + 1){
+                int numeroAleatorio = (int) (Math.random() * (i) + 0);
+                 nodo = mapa.get(llaves[numeroAleatorio]);
+            }
+            i++;
+        }
+        return nodo;
+    }
+
+    public List<GraphNode> determinarMovimiento(GraphNode nodoActual){
         Map<Integer, GraphNode> mapa = new TreeMap<>();
-        GraphNode nodoDefinitivo = null;
-        if(nodoActual.getArriba().getData().startsWith("blanco")){
-            mapa.put(nodoActual.getArriba().getDistancia(), nodoActual.getArriba());
-        }
-        if(nodoActual.getArribaDerecha().getData().startsWith("blanco")){
-            mapa.put(nodoActual.getArribaDerecha().getDistancia(), nodoActual.getArribaDerecha());
-        }
         if(nodoActual.getArribaIzquierda().getData().startsWith("blanco")){
             mapa.put(nodoActual.getArribaIzquierda().getDistancia(), nodoActual.getArribaIzquierda());
+        }else if((nodoActual.getArribaIzquierda().getData().startsWith("youtube") || nodoActual.getArribaIzquierda().getData().startsWith("twitter")) && nodoActual.getArribaIzquierda().getArribaIzquierda().getData().startsWith("blanco")){
+            mapa.put(nodoActual.getArribaIzquierda().getArribaIzquierda().getDistancia(), nodoActual.getArribaIzquierda().getArribaIzquierda());
         }
-        if(nodoActual.getAbajo().getData().startsWith("blanco")){
-            mapa.put(nodoActual.getAbajo().getDistancia(), nodoActual.getAbajo());
-        }
-        if(nodoActual.getAbajoDerecha().getData().startsWith("blanco")){
-            mapa.put(nodoActual.getAbajoDerecha().getDistancia(), nodoActual.getAbajoDerecha());
-        }
+
         if(nodoActual.getAbajoIzquierda().getData().startsWith("blanco")){
             mapa.put(nodoActual.getAbajoIzquierda().getDistancia(), nodoActual.getAbajoIzquierda());
+        }else if((nodoActual.getAbajoIzquierda().getData().startsWith("youtube") || nodoActual.getAbajoIzquierda().getData().startsWith("twitter")) && nodoActual.getAbajoIzquierda().getAbajoIzquierda().getData().startsWith("blanco")){
+            mapa.put(nodoActual.getAbajoIzquierda().getAbajoIzquierda().getDistancia(), nodoActual.getAbajoIzquierda().getAbajoIzquierda());
         }
-        if(!mapa.isEmpty()) nodoDefinitivo = analizarMovimientos(mapa);
-        /*Iterator<Integer> iterator = mapa.keySet().iterator();
-        while(iterator.hasNext()){
-            Integer key = iterator.next();
-            System.out.print(mapa.get(key).getData() + ", ");
+
+        if(nodoActual.getArriba().getData().startsWith("blanco") && (Integer.parseInt(nodoActual.getArriba().getData().substring(nodoActual.getArriba().getData().indexOf(".") + 1)) > 8)){
+            mapa.put(nodoActual.getArriba().getDistancia(), nodoActual.getArriba());
+        }else if((nodoActual.getArriba().getData().startsWith("youtube") || nodoActual.getArriba().getData().startsWith("twitter")) && nodoActual.getArriba().getArriba().getData().startsWith("blanco") && (Integer.parseInt(nodoActual.getArriba().getArriba().getData().substring(nodoActual.getArriba().getArriba().getData().indexOf(".") + 1)) > 10)){
+            mapa.put(nodoActual.getArriba().getArriba().getDistancia(), nodoActual.getArriba().getArriba());
         }
-        System.out.println("\n");*/
-        intercambiarValores(nodoActual, nodoDefinitivo);
-        pintarTablero(new GraphNode(""));
+
+        if(nodoActual.getArribaDerecha().getData().startsWith("blanco") && !dificultad.equals("dificil")){
+            mapa.put(nodoActual.getArribaDerecha().getDistancia(), nodoActual.getArribaDerecha());
+        }
+
+
+        if(nodoActual.getAbajo().getData().startsWith("blanco") && (Integer.parseInt(nodoActual.getAbajo().getData().substring(nodoActual.getAbajo().getData().indexOf(".") + 1)) > 8)){
+            mapa.put(nodoActual.getAbajo().getDistancia(), nodoActual.getAbajo());
+        }else if((nodoActual.getAbajo().getData().startsWith("youtube") || nodoActual.getAbajo().getData().startsWith("twitter")) && nodoActual.getAbajo().getAbajo().getData().startsWith("blanco") && (Integer.parseInt(nodoActual.getAbajo().getAbajo().getData().substring(nodoActual.getAbajo().getAbajo().getData().indexOf(".") + 1)) > 10)){
+            mapa.put(nodoActual.getAbajo().getAbajo().getDistancia(), nodoActual.getAbajo().getAbajo());
+        }
+
+        if(nodoActual.getAbajoDerecha().getData().startsWith("blanco") && !dificultad.equals("dificil")){
+            mapa.put(nodoActual.getAbajoDerecha().getDistancia(), nodoActual.getAbajoDerecha());
+        }
+
+
+        if(!mapa.isEmpty()) {
+            List<GraphNode> lista = new LinkedList<>();
+            lista.add(analizarMovimientos(mapa));
+            lista.add(nodoActual);
+            return lista;
+        }else return null;
     }
 
     public GraphNode analizarMovimientos(Map<Integer, GraphNode> mapa){
         int numeroAleatorio = (int) (Math.random() * 100 + 1);
-        //System.out.print(numeroAleatorio + ", ");
         Object[] distancias = mapa.keySet().toArray();
         return obtenerMejorMovivimiento(mapa, numeroAleatorio, distancias);
     }
@@ -326,10 +437,10 @@ public class VistaPrincipalControlador implements ActionListener{
                 if(numeroAleatorio < 75) mejorNodo = mapa.get(distancias[0]);
                 else mejorNodo = mapa.get(distancias[1]);
             }else if(dificultad.equals("intermedio")) {
-                if (numeroAleatorio < 50) mejorNodo = mapa.get(distancias[0]);
+                if (numeroAleatorio < 20) mejorNodo = mapa.get(distancias[0]);
                 else mejorNodo = mapa.get(distancias[1]);
             }else if(dificultad.equals("dificil")) {
-                if (numeroAleatorio < 15) mejorNodo = mapa.get(distancias[0]);
+                if (numeroAleatorio < 5) mejorNodo = mapa.get(distancias[0]);
                 else mejorNodo = mapa.get(distancias[1]);
             }
         }
@@ -339,12 +450,12 @@ public class VistaPrincipalControlador implements ActionListener{
                 else if(numeroAleatorio >= 50 && numeroAleatorio < 80) mejorNodo = mapa.get(distancias[1]);
                 else mejorNodo = mapa.get(distancias[2]);
             }else if(dificultad.equals("intermedio")) {
-                if (numeroAleatorio < 33) mejorNodo = mapa.get(distancias[0]);
-                else if(numeroAleatorio >= 33 && numeroAleatorio < 66) mejorNodo = mapa.get(distancias[1]);
+                if (numeroAleatorio < 20) mejorNodo = mapa.get(distancias[0]);
+                else if(numeroAleatorio >= 20 && numeroAleatorio < 50) mejorNodo = mapa.get(distancias[1]);
                 else mejorNodo = mapa.get(distancias[2]);
             }else if(dificultad.equals("dificil")) {
-                if (numeroAleatorio < 10) mejorNodo =  mapa.get(distancias[0]);
-                else if(numeroAleatorio >= 10 && numeroAleatorio < 45) mejorNodo = mapa.get(distancias[1]);
+                if (numeroAleatorio < 8) mejorNodo =  mapa.get(distancias[0]);
+                else if(numeroAleatorio >= 8 && numeroAleatorio < 15) mejorNodo = mapa.get(distancias[1]);
                 else mejorNodo = mapa.get(distancias[2]);
             }
         }
@@ -355,14 +466,14 @@ public class VistaPrincipalControlador implements ActionListener{
                 else if(numeroAleatorio >= 70 && numeroAleatorio < 90) mejorNodo = mapa.get(distancias[2]);
                 else mejorNodo = mapa.get(distancias[3]);
             }else if(dificultad.equals("intermedio")) {
-                if(numeroAleatorio < 25) mejorNodo = mapa.get(distancias[0]);
-                else if(numeroAleatorio >= 25 && numeroAleatorio < 50) mejorNodo = mapa.get(distancias[1]);
-                else if(numeroAleatorio >= 50 && numeroAleatorio < 75) mejorNodo = mapa.get(distancias[2]);
+                if(numeroAleatorio < 15) mejorNodo = mapa.get(distancias[0]);
+                else if(numeroAleatorio >= 15 && numeroAleatorio < 40) mejorNodo = mapa.get(distancias[1]);
+                else if(numeroAleatorio >= 40 && numeroAleatorio < 65) mejorNodo = mapa.get(distancias[2]);
                 else mejorNodo = mapa.get(distancias[3]);
             }else if(dificultad.equals("dificil")) {
-                if(numeroAleatorio < 5) mejorNodo = mapa.get(distancias[0]);
-                else if(numeroAleatorio >= 5 && numeroAleatorio < 25) mejorNodo = mapa.get(distancias[1]);
-                else if(numeroAleatorio >= 25 && numeroAleatorio < 50) mejorNodo = mapa.get(distancias[2]);
+                if(numeroAleatorio < 3) mejorNodo = mapa.get(distancias[0]);
+                else if(numeroAleatorio >= 3 && numeroAleatorio < 10) mejorNodo = mapa.get(distancias[1]);
+                else if(numeroAleatorio >= 10 && numeroAleatorio < 18) mejorNodo = mapa.get(distancias[2]);
                 else mejorNodo = mapa.get(distancias[3]);
             }
         }
@@ -374,16 +485,16 @@ public class VistaPrincipalControlador implements ActionListener{
                 else if(numeroAleatorio >= 75 && numeroAleatorio < 90) mejorNodo = mapa.get(distancias[3]);
                 else mejorNodo = mapa.get(distancias[4]);
             }else if(dificultad.equals("intermedio")) {
-                if(numeroAleatorio < 20) mejorNodo = mapa.get(distancias[0]);
-                else if(numeroAleatorio >= 20 && numeroAleatorio < 40) mejorNodo = mapa.get(distancias[1]);
-                else if(numeroAleatorio >= 40 && numeroAleatorio < 60) mejorNodo = mapa.get(distancias[2]);
-                else if(numeroAleatorio >= 60 && numeroAleatorio < 80) mejorNodo = mapa.get(distancias[3]);
+                if(numeroAleatorio < 10) mejorNodo = mapa.get(distancias[0]);
+                else if(numeroAleatorio >= 10 && numeroAleatorio < 20) mejorNodo = mapa.get(distancias[1]);
+                else if(numeroAleatorio >= 30 && numeroAleatorio < 40) mejorNodo = mapa.get(distancias[2]);
+                else if(numeroAleatorio >= 40 && numeroAleatorio < 50) mejorNodo = mapa.get(distancias[3]);
                 else mejorNodo = mapa.get(distancias[4]);
             }else if(dificultad.equals("dificil")) {
                 if(numeroAleatorio < 5) mejorNodo = mapa.get(distancias[0]);
-                else if(numeroAleatorio >= 5 && numeroAleatorio < 15) mejorNodo = mapa.get(distancias[1]);
-                else if(numeroAleatorio >= 15 && numeroAleatorio < 30) mejorNodo = mapa.get(distancias[2]);
-                else if(numeroAleatorio >= 30 && numeroAleatorio < 50) mejorNodo = mapa.get(distancias[3]);
+                else if(numeroAleatorio >= 5 && numeroAleatorio < 10) mejorNodo = mapa.get(distancias[1]);
+                else if(numeroAleatorio >= 10 && numeroAleatorio < 20) mejorNodo = mapa.get(distancias[2]);
+                else if(numeroAleatorio >= 20 && numeroAleatorio < 30) mejorNodo = mapa.get(distancias[3]);
                 else mejorNodo = mapa.get(distancias[4]);
             }
         }
@@ -396,11 +507,11 @@ public class VistaPrincipalControlador implements ActionListener{
                 else if(numeroAleatorio >= 85 && numeroAleatorio < 95) mejorNodo = mapa.get(distancias[4]);
                 else mejorNodo = mapa.get(distancias[5]);
             }else if(dificultad.equals("intermedio")) {
-                if(numeroAleatorio < 18) mejorNodo = mapa.get(distancias[0]);
-                else if(numeroAleatorio >= 18 && numeroAleatorio < 36) mejorNodo = mapa.get(distancias[1]);
-                else if(numeroAleatorio >= 36 && numeroAleatorio < 54) mejorNodo = mapa.get(distancias[2]);
-                else if(numeroAleatorio >= 54 && numeroAleatorio < 72) mejorNodo = mapa.get(distancias[3]);
-                else if(numeroAleatorio >= 72 && numeroAleatorio < 90) mejorNodo = mapa.get(distancias[4]);
+                if(numeroAleatorio < 8) mejorNodo = mapa.get(distancias[0]);
+                else if(numeroAleatorio >= 8 && numeroAleatorio < 16) mejorNodo = mapa.get(distancias[1]);
+                else if(numeroAleatorio >= 16 && numeroAleatorio < 25) mejorNodo = mapa.get(distancias[2]);
+                else if(numeroAleatorio >= 25 && numeroAleatorio < 32) mejorNodo = mapa.get(distancias[3]);
+                else if(numeroAleatorio >= 32 && numeroAleatorio < 40) mejorNodo = mapa.get(distancias[4]);
                 else mejorNodo = mapa.get(distancias[5]);
             }else if(dificultad.equals("dificil")) {
                 if(numeroAleatorio < 5) mejorNodo = mapa.get(distancias[0]);
@@ -411,7 +522,6 @@ public class VistaPrincipalControlador implements ActionListener{
                 else mejorNodo = mapa.get(distancias[5]);
             }
         }
-        //System.out.println(distancias.length + ", " + mejorNodo.getData());
         return mejorNodo;
     }
 
@@ -616,6 +726,10 @@ public class VistaPrincipalControlador implements ActionListener{
     }
 
     private void inicializarGrafo(){
+        d1.setDistancia(54);
+        d2.setDistancia(53);
+        d3.setDistancia(52);
+
         c1.setArriba(c2);
         c1.setArribaDerecha(c3);
         c1.setAbajoDerecha(c4);
@@ -628,6 +742,7 @@ public class VistaPrincipalControlador implements ActionListener{
         c2.setAbajoDerecha(c3);
         c2.setAbajoIzquierda(c7);
         c2.setArribaDerecha(c10);
+        c2.setArribaIzquierda(d2);
         c2.setDistancia(45);
 
         c3.setArribaIzquierda(c2);
@@ -650,6 +765,7 @@ public class VistaPrincipalControlador implements ActionListener{
         c5.setArriba(c1);
         c5.setArribaDerecha(c4);
         c5.setAbajoDerecha(c9);
+        c5.setAbajoIzquierda(d3);
         c5.setDistancia(45);
 
         c6.setArriba(c7);
@@ -662,7 +778,8 @@ public class VistaPrincipalControlador implements ActionListener{
         c7.setAbajoDerecha(c1);
         c7.setAbajo(c6);
         c7.setAbajoIzquierda(c8);
-        c7.setDistancia(47);
+        c7.setArribaIzquierda(d1);
+        c7.setDistancia(48);
 
         c8.setArribaDerecha(c7);
         c8.setAbajoDerecha(c6);
