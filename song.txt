@@ -7,3 +7,5 @@ Form the lines
 Shield by shield
 
 --------------------------------------------
+
+Branching and merge operations
