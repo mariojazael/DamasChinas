@@ -9,3 +9,5 @@ Shield by shield
 --------------------------------------------
 
 Branching and merge operations
+
+side by side
